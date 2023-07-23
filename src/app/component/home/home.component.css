@@ -1,0 +1,225 @@
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.form-container{  
+  margin-top: 100px;
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-container {
+
+  width: auto;
+  max-width: 400px;
+  height: 220px;
+  perspective: 800px;
+  cursor: pointer;
+  overflow: hidden; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s; /* Ajusta la duración a 0.3 segundos para una animación suave */
+  position: relative;
+  transform-style: preserve-3d;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-front, .card-back {
+  position: absolute;
+  width: 70%;
+  height: 70%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  box-shadow: 0 0px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: #252f48;
+}
+
+.card-back {
+  transform: rotateY(0deg);
+  background-color: #252f48;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Estilos previos */
+
+.card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.card p {
+  margin: 0;
+  color: #ffffff;
+}
+
+
+
+.card-expiry {
+  font-size: 1.2rem;
+}
+
+.cvv {
+
+  background-color: #161c2d;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  color: #ffffff;
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  width: 80px;
+  height: 30px;
+  text-align: center;
+}
+
+.card.flip .card-front {
+  display: none;
+}
+
+.card.flip .card-back {
+  display: flex;
+}
+
+.card-type{
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  margin: auto;
+  font-size: .7rem;
+
+}
+
+.card-chip{
+  width: 40px;
+  position: absolute;
+  top: 35px;
+  left: 25px;
+  margin: auto;
+
+}
+
+.card-number{
+  position: relative;
+  margin: auto;
+  font-size: 1.2rem;
+  text-align: center;
+  color: #ffffff;
+  top: 75px;
+}
+
+.card-name{
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  margin: auto;
+  font-size: .8rem;
+  color: #ffffff;
+}
+
+.card-expiry{
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  margin: auto;
+  font-size: .6rem;
+}
+
+.card-bar{
+  background-color: rgba(32, 18, 18, 0.305);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  color: #ffffff;
+}
+
+.card-logo{
+  width: 40px;
+  position: absolute;
+  top: 45px;
+  left: 25px;
+  margin: auto;
+  color: #ffffff;
+}
+
+
+form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 400px;
+  min-width: 200px;
+  margin: auto;
+}
+
+input {
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+select {
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+button{
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  padding: 5px;
+  box-sizing: border-box;
+  background-color: #161c2d;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}

@@ -1,0 +1,45 @@
+<div class="conteiner">
+
+    <div class="form-container">
+        <form (ngSubmit)="onSubmit()" #cardForm="ngForm">
+          <input type="text" name="name" placeholder="Nombre" [(ngModel)]="cardName" required>
+          <input type="text" name="number" placeholder="Número de tarjeta" [(ngModel)]="cardNumber" required>
+          <input type="date" name="expiry" placeholder="Fecha de expiración" [(ngModel)]="cardExpiry" required>
+            <input type="text" name="cvv" placeholder="CVV" [(ngModel)]="cardCvv" required>
+            <select name="type" [(ngModel)]="cardType" aria-placeholder="selecciones">
+              <option value="Debito">Debito</option>
+              <option value="Credito">Credito</option>
+            </select>
+
+          <button type="submit">Guardar tarjeta</button>
+        </form>
+      </div>
+
+<div class="card-container" (mousemove)="rotateCard($event)" (click)="flipCard()">
+    <div class="card">
+        <div class="card-inner" [style.transform]="cardTransform" [class.flip]="isFlipped" >
+        <div class="card-front" *ngIf="!isFlipped">
+        <p class="card-type" >Tarjeta de {{ cardData.type }}</p>
+        <img class="card-chip" src="https://cdn-icons-png.flaticon.com/512/6404/6404078.png" alt="chip">
+        
+        <p class="card-number">{{ cardData.number }}</p>
+        <p class="card-name">{{ cardData.name }}</p>
+        <p class="card-expiry">Fecha exp:{{ cardData.expiry }}</p>
+        </div>
+        <div class="card-back" *ngIf="isFlipped">
+            <p class="card-type" >Tarjeta de {{ cardData.type }}</p>
+            <div class="card-bar">
+               
+            </div>
+          <div class="cvv">cvv: {{ cardData.cvv}}</div>\
+         
+          <div class="card-logo">{{cardData.types}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+      
+      
+</div>
